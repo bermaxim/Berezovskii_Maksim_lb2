@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 #define N 100
 
@@ -8,19 +7,12 @@
 #include "diff.h"
 #include "sum.h"
 
-#include "key_func.h"
-
-
 void print_res(){
+
     int array[N];
-    int i = 0;
+    int i = 1;
 
-    // while (scanf("%d", &array[i]) == 1){
-    //     i++;
-    // }   
-
-    // int array[] = malloc(N * sizeof(int));
-    // fgets(array, N, stdin);
+    scanf("%d", &array[0]);
 
     while (getchar() != '\n'){
         scanf("%d", &array[i]);
@@ -28,7 +20,7 @@ void print_res(){
     }
 
     int len = i;
-    
+
     int index_max = abs_max(array, len);
     int index_min = abs_min(array, len);
 

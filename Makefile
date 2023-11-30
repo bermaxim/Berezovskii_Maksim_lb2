@@ -3,10 +3,10 @@ all: menu.o abs_max.o abs_min.o diff.o sum.o key_func.o
 
 
 
-menu.o: menu.c key_func.h
+menu.o: menu.c abs_max.h abs_min.h diff.h sum.h key_func.h
 	gcc -c -std=c99 menu.c 
 
-key_func.o: key_func.c abs_max.h abs_min.h diff.h sum.h
+key_func.o: key_func.c key_func.h abs_max.h abs_min.h diff.h sum.h
 	gcc -c -std=c99 key_func.c
 
 abs_max.o: abs_max.c abs_max.h
